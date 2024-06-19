@@ -54,10 +54,12 @@ export default function Testimony(){
           <div className="relative w-full" >
             <Carousel
               opts={{ align: "start", }}
-              className=""
+              className="relative mt-9"
             >
-              <CarouselPrevious />
-              <CarouselNext />
+              <div className="absolute -top-8 right-10">
+                <CarouselPrevious className="-left-9"/>
+                <CarouselNext className="-right-9" />
+              </div>
               <CarouselContent>
                 {testimonialData.map((index) => (
                   <CarouselItem key={index.slideNo} className="md:basis-1/2 lg:basis-1/3">

@@ -33,7 +33,7 @@ export default function MainNav(){
       <div className="relative -mx-4 flex items-center justify-between">
         <div className="w-60 max-w-full px-4">
           <h2 className="text-lg font-bold hover:text-foreground/75">
-            <Link href="/" className="block w-full py-5">
+            <Link href="/" className="block w-full py-5 text-sm font-bold">
                 {siteinfo.sitename}
             </Link>
           </h2>
@@ -50,7 +50,7 @@ export default function MainNav(){
                     <li key={item.name}>
                       <Link 
                         href={item.href}
-                        className="flex py-2 text-base font-medium hover:text-secondary-foreground/50 dark:text-dark-6 dark:hover:text-secondary-foreground lg:ml-12 lg:inline-flex"
+                        className="flex py-2 font-medium hover:text-secondary-foreground/50 dark:text-dark-6 dark:hover:text-secondary-foreground lg:ml-12 lg:inline-flex"
                       >{item.name}
                       </Link>
                     </li>
@@ -65,27 +65,27 @@ export default function MainNav(){
                   </a>
                 </li>
                 <li>
-                          <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                              <Button variant="outline" size="icon">
-                                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                                <span className="sr-only">Toggle theme</span>
-                              </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent align="end">
-                              <DropdownMenuItem onClick={() => setTheme("light")}>
-                                Light
-                              </DropdownMenuItem>
-                              <DropdownMenuItem onClick={() => setTheme("dark")}>
-                                Dark
-                              </DropdownMenuItem>
-                              <DropdownMenuItem onClick={() => setTheme("system")}>
-                                System
-                              </DropdownMenuItem>
-                            </DropdownMenuContent>
-                          </DropdownMenu>
-                        </li>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="outline" size="icon">
+                        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                        <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                        <span className="sr-only">Toggle theme</span>
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem onClick={() => setTheme("light")}>
+                        Light
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setTheme("dark")}>
+                        Dark
+                      </DropdownMenuItem>
+                      <DropdownMenuItem onClick={() => setTheme("system")}>
+                        System
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </li>
               </ul>   
           :   
             <>
